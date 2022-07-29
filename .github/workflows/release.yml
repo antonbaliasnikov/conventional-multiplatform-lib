@@ -1,0 +1,26 @@
+name: Release
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  release:
+    env:
+      GITHUB_ACTOR: ${{ secrets.PERSONAL_GITHUB_ACTOR }}
+      GITHUB_TOKEN: ${{ secrets.PERSONAL_GITHUB_TOKEN }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install Java
+        uses: actions/setup-java@v1
+        with:
+          java-version: 11
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 'lts/*'
+      - name: Build and test
+        run: ./gradlew build
+      - name: Release
+        run: npm install && npx semantic-release
