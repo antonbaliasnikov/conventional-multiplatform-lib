@@ -9,6 +9,13 @@ interface Base64Encoder {
             encoded.forEach { append(it.toInt().toChar()) }
         }
     }
+
+    fun differentEncodeToString(src: ByteArray): String {
+        val encoded = encode(src)
+        return buildString(encoded.size) {
+            encoded.forEach { append(it.toInt().toChar()) }
+        }
+    }
 }
 
 expect object Base64Factory {
