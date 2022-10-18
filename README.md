@@ -21,6 +21,8 @@ General rules:
 
 > test code
 
+> test code again
+
 ### Semantic release
 
 After studying of multiple available solutions to automate release process for any programming language and build system,
