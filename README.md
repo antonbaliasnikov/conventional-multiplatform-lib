@@ -21,6 +21,8 @@ General rules:
 
 > test commit
 
+> test commit 2
+
 ### Semantic release
 
 After studying of multiple available solutions to automate release process for any programming language and build system,
