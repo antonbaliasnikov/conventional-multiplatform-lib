@@ -19,6 +19,8 @@ General rules:
 > This solution works with any kind of Git Workflow and can be easily adopted further
 > to generate pre-releases, alpha/beta versions, etc.
 
+> test code
+
 ### Semantic release
 
 After studying of multiple available solutions to automate release process for any programming language and build system,
